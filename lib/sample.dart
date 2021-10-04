@@ -28,6 +28,7 @@ CircleAvatar _bigAvatar(String title) {
 enum PageItems { first, second, third }
 
 final image = AssetImage('sampe.png');
+
 List<Widget> items(PageItems item) {
   switch (item) {
     case PageItems.first:
@@ -95,12 +96,12 @@ List<Widget> get items3 {
       alignment: Alignment.centerLeft,
       child: _normalAvatar('3'),
     ),
-    // AnimatedAlign(
-    //   key: ValueKey(PageItems.first),
-    //   duration: _duration,
-    //   alignment: Alignment.centerRight,
-    //   child: _normalAvatar('1'),
-    // ),
+    AnimatedAlign(
+      key: ValueKey(PageItems.first),
+      duration: _duration,
+      alignment: Alignment.centerRight,
+      child: _normalAvatar('1'),
+    ),
     AnimatedAlign(
       key: ValueKey(PageItems.second),
       duration: _duration,
